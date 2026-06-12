@@ -74,7 +74,7 @@ const resume: ResumeData = {
   roles: ["AI Agents Developer", "Python & Backend"],
   tagline: "Building software that can think,\nreason and automate.",
   email: "nachomazzoni1@gmail.com",
-  location: "Ciudad, País",
+  location: "Santa Fe, Argentina",
   linkedin: "https://www.linkedin.com/in/ignacio-mazzoni-493732303/",
   github: "https://www.github.com/nacho-mazzoni",
   about:
