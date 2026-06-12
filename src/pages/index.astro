@@ -1,0 +1,32 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Nav from "@/components/Nav.astro";
+import Hero from "@/components/Hero.astro";
+import About from "@/components/About.astro";
+import Experience from "@/components/Experience.astro";
+import Education from "@/components/Education.astro";
+import Skills from "@/components/Skills.astro";
+import Projects from "@/components/Projects.astro";
+import Languages from "@/components/Languages.astro";
+import Certifications from "@/components/Certifications.astro";
+import Blog from "@/components/Blog.astro";
+import Contact from "@/components/Contact.astro";
+import Footer from "@/components/Footer.astro";
+---
+
+<BaseLayout title="Ignacio Mazzoni — Systems Engineering Student" description="Personal resume website of Ignacio Mazzoni, Systems Engineering Student">
+  <Nav />
+  <main>
+    <Hero />
+    <About />
+    <Experience />
+    <Education />
+    <Skills />
+    <Projects />
+    <Languages />
+
+    <Blog />
+    <Contact />
+  </main>
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,43 @@
+---
+const sections = [
+  { id: "about", label: "About" },
+  { id: "experience", label: "Experience" },
+  { id: "education", label: "Education" },
+  { id: "skills", label: "Skills" },
+  { id: "projects", label: "Projects" },
+  { id: "languages", label: "Languages" },
+  { id: "certifications", label: "Certifications" },
+  { id: "blog", label: "Blog" },
+  { id: "contact", label: "Contact" },
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-border shadow-sm">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="#" class="text-xl font-bold text-primary">IM</a>
+      <div class="hidden md:flex space-x-1">
+        {sections.map((s) => (
+          <a
+            href={`#${s.id}`}
+            class="px-3 py-2 text-sm font-medium text-muted hover:text-primary transition-colors rounded-md hover:bg-section-alt"
+          >
+            {s.label}
+          </a>
+        ))}
+      </div>
+      <details class="md:hidden">
+        <summary class="list-none p-2 cursor-pointer text-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </summary>
+        <div class="absolute left-0 right-0 top-16 bg-white border-b border-border shadow-md p-4 flex flex-col space-y-2">
+          {sections.map((s) => (
+            <a href={`#${s.id}`} class="px-3 py-2 text-sm font-medium text-muted hover:text-primary transition-colors rounded-md hover:bg-section-alt">
+              {s.label}
+            </a>
+          ))}
+        </div>
+      </details>
+    </div>
+  </div>
+</nav>

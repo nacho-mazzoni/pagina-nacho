@@ -1,0 +1,26 @@
+---
+import resume from "@/data/resume";
+---
+
+<section id="certifications" class="py-20 bg-section-alt">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+    <h2 class="text-3xl font-bold text-primary mb-2">Certifications</h2>
+    <div class="w-16 h-1 bg-accent mb-8 rounded-full"></div>
+    <div class="space-y-4">
+      {resume.certifications.map((cert) => (
+        <div class="bg-card border border-border rounded-xl p-5 shadow-sm flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <div>
+            <h3 class="text-lg font-semibold text-primary">{cert.name}</h3>
+            <p class="text-sm text-muted">{cert.issuer} &middot; {cert.date}</p>
+          </div>
+          {cert.url && (
+            <a href={cert.url} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-accent hover:text-primary-light shrink-0">
+              View credential
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+            </a>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

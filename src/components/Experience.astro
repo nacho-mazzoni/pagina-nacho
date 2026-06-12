@@ -1,0 +1,26 @@
+---
+import resume from "@/data/resume";
+---
+
+<section id="experience" class="py-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+    <h2 class="text-3xl font-bold text-primary mb-2">Experience</h2>
+    <div class="w-16 h-1 bg-accent mb-8 rounded-full"></div>
+    <div class="space-y-8">
+      {resume.experience.map((exp, i) => (
+        <div class="relative pl-8 border-l-2 border-accent reveal" style={`transition-delay: ${i * 0.15}s`}>
+          <div class="absolute left-[-9px] top-1 w-4 h-4 rounded-full bg-accent"></div>
+          <span class="inline-block text-sm font-medium text-accent mb-1">{exp.period}</span>
+          <h3 class="text-xl font-bold text-primary">{exp.role}</h3>
+          <p class="text-base font-medium text-primary-light mb-2">{exp.company}</p>
+          <p class="text-muted mb-3">{exp.description}</p>
+          <ul class="list-disc list-inside space-y-1 text-muted">
+            {exp.highlights.map((h) => (
+              <li>{h}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
