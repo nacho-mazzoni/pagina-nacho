@@ -16,7 +16,6 @@ export interface Education {
 export interface Skill {
   name: string;
   category: string;
-  level: number;
 }
 
 export interface Project {
@@ -106,22 +105,24 @@ const resume: ResumeData = {
   education: [
     {
       institution: "Universidad Tecnológica Nacional - Facultad Regional Santa Fe (UTN FRSF)",
-      degree: "Ingeniería en Sistemas",
+      degree: "Systems Engineer Student",
       period: "2022 - Present",
-      description: "Título de grado con orientación en desarrollo de software.",
+      description: "Degree tittle with a focus on software development and systems design.",
     },
   ],
   skills: [
-    { name: "TypeScript", category: "Languages", level: 70 },
-    { name: "JavaScript", category: "Languages", level: 75 },
-    { name: "Python", category: "Languages", level: 95 },
-    { name: "React", category: "Frontend", level: 70 },
-    { name: "Astro", category: "Frontend", level: 60 },
-    { name: "Tailwind CSS", category: "Frontend", level: 85 },
-    { name: "Node.js", category: "Backend", level: 85 },
-    { name: "PostgreSQL", category: "Backend", level: 85 },
-    { name: "Docker", category: "DevOps", level: 65 },
-    { name: "Git", category: "DevOps", level: 90 },
+    { name: "TypeScript", category: "Languages" },
+    { name: "JavaScript", category: "Languages" },
+    { name: "Python", category: "Languages" },
+    { name: "C++", category: "Languages" },
+    { name: "Java", category: "Languages" },
+    { name: "React", category: "Frontend" },
+    { name: "Astro", category: "Frontend" },
+    { name: "Tailwind CSS", category: "Frontend" },
+    { name: "Node.js", category: "Backend" },
+    { name: "PostgreSQL", category: "Backend" },
+    { name: "Docker", category: "DevOps" },
+    { name: "Git", category: "DevOps"},
   ],
   projects: [
     {
@@ -165,7 +166,7 @@ const resume: ResumeData = {
   ],
   languages: [
     { name: "Español", level: "Nativo" },
-    { name: "Inglés", level: "Avanzado (C1)" },
+    { name: "Inglés", level: "Avanzado (B1)" },
   ],
   certifications: [
   ],

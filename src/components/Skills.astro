@@ -24,12 +24,10 @@ const grouped = resume.skills.reduce(
               <div>
                 <div class="flex justify-between items-center mb-1">
                   <span class="text-sm font-medium text-text">{skill.name}</span>
-                  <span class="text-xs text-muted">{skill.level}%</span>
                 </div>
                 <div class="w-full h-2 bg-border rounded-full overflow-hidden">
                   <div
                     class="h-full bg-accent rounded-full transition-all"
-                    style={`width: ${skill.level}%`}
                   ></div>
                 </div>
               </div>
