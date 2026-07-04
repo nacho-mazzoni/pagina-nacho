@@ -19,18 +19,11 @@ const grouped = resume.skills.reduce(
       {Object.entries(grouped).map(([category, skills]) => (
         <div>
           <h3 class="text-lg font-semibold text-primary mb-4">{category}</h3>
-          <div class="space-y-4">
+          <div class="flex flex-wrap gap-2">
             {skills.map((skill) => (
-              <div>
-                <div class="flex justify-between items-center mb-1">
-                  <span class="text-sm font-medium text-text">{skill.name}</span>
-                </div>
-                <div class="w-full h-2 bg-border rounded-full overflow-hidden">
-                  <div
-                    class="h-full bg-accent rounded-full transition-all"
-                  ></div>
-                </div>
-              </div>
+              <span class="px-3 py-1 text-sm font-medium bg-primary-light/10 text-primary-light rounded-full">
+                {skill.name}
+              </span>
             ))}
           </div>
         </div>
